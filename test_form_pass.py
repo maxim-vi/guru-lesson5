@@ -1,14 +1,6 @@
 from selene import browser , have, be
-from selenium import webdriver
 import os
-import pytest
 
-
-browser.config.driver = webdriver.Firefox()
-@pytest.fixture
-def size_browser():
-    browser.config.window_width = 1280
-    browser.config.window_height = 1040
 
 def test_find_pass(size_browser):
     browser.open('https://demoqa.com/automation-practice-form')
